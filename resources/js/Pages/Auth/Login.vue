@@ -45,7 +45,11 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <JetLabel for="email" value="Email" />
+                <JetLabel
+                    for="email"
+                    value="Email"
+                    class="text-gray-300 font-bold"
+                />
                 <JetInput
                     id="email"
                     v-model="form.email"
@@ -57,7 +61,11 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <JetLabel for="password" value="Password" />
+                <JetLabel
+                    for="password"
+                    value="Password"
+                    class="text-gray-300 font-bold"
+                />
                 <JetInput
                     id="password"
                     v-model="form.password"
@@ -74,7 +82,7 @@ const submit = () => {
                         v-model:checked="form.remember"
                         name="remember"
                     />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                    <span class="ml-2 text-sm text-gray-300">Remember me</span>
                 </label>
             </div>
 
@@ -82,7 +90,7 @@ const submit = () => {
                 <Link
                     v-if="canResetPassword"
                     :href="route('password.request')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900"
+                    class="underline text-sm text-white hover:text-red-300"
                 >
                     Forgot your password?
                 </Link>

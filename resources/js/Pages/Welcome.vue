@@ -17,7 +17,9 @@ defineProps({
         <div
             class="template-netflix h-screen flex justify-center items-center bg-cover bg-center"
         >
-            <div class="text-red-600 text-6xl absolute top-0 left-0 mt-5 ml-5">
+            <div
+                class="text-red-600 font-semibold text-6xl absolute top-0 left-0 mt-5 ml-5"
+            >
                 <h1 id="logo">Nutflux</h1>
             </div>
             <Link :href="route('login')">

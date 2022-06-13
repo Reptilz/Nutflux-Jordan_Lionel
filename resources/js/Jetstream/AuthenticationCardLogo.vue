@@ -11,11 +11,11 @@ import { Link } from "@inertiajs/inertia-vue3";
 <style lang="scss" scoped>
 h1 {
     font-size: 2rem;
-    background: rgb(228, 228, 228);
+    color: white;
     padding: 10px;
     border-radius: 10px;
     &:hover {
-        background: rgb(196, 196, 196);
+        opacity: 0.5;
     }
 }
 </style>
