@@ -172,14 +172,12 @@
 <script>
 import AppLayout from "./../../Layouts/AppLayout.vue";
 import Header from "./../../components/Header.vue";
-import Sidebar from "./../../components/Sidebar.vue";
 
 export default {
     name: "Movie",
     components: {
         AppLayout,
         Header,
-        Sidebar,
     },
     data() {
         return {
