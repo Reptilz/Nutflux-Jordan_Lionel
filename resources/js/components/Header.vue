@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-        <img src="../../../public/assets/img/reflets-rose.jpg" alt="banniere" />
+        <img src="../../../public/images/reflets-rose.jpg" alt="banniere" />
         <div class="text-container">
             <div class="text">
                 <h1><span>Nutflux</span></h1>

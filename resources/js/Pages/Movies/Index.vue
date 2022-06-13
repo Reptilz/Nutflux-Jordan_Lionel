@@ -2,6 +2,10 @@
     <AppLayout>
         <!-- COMPONENT HEADER -->
         <Header />
+
+        <!-- CATEGORIES SECTION -->
+        <div class="list-category"></div>
+
         <!-- LIST MOVIES -->
         <div class="movies mx-16">
             <div
@@ -83,7 +87,7 @@
                                                 class="flex flex-col datos_col"
                                             >
                                                 <div class="release">
-                                                    2021-09-15
+                                                    {{ movie.dateReview }}
                                                 </div>
                                                 <div
                                                     class="text-sm text-gray-400"
@@ -95,7 +99,7 @@
                                                 class="flex flex-col datos_col"
                                             >
                                                 <div class="release">
-                                                    155 min
+                                                    {{ movie.duration }}
                                                 </div>
                                                 <div
                                                     class="text-sm text-gray-400"
@@ -122,7 +126,11 @@
                             </div>
                             <img
                                 class="absolute inset-0 transform w-full -translate-y-4"
-                                src="http://image.tmdb.org/t/p/w342/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg"
+                                :src="
+                                    require('../../../../public/images/' +
+                                        movie.image).default
+                                "
+                                :alt="`${movie.title}`"
                                 style="filter: grayscale(0)"
                             />
                             <div
@@ -180,9 +188,6 @@ export default {
         };
     },
     props: ["movies", "categories"],
-    mounted() {
-        console.log(this.categories);
-    },
 };
 </script>
 
@@ -190,5 +195,11 @@ export default {
 .movies {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+.list-category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 </style>

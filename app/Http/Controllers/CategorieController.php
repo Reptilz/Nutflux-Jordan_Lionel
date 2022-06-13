@@ -11,6 +11,7 @@ class CategorieController extends Controller
     public function index()
     {
         $categories = Categorie::all();
+
         return Inertia::render('Movies/Index', [
             'categories' => $categories
         ]);
