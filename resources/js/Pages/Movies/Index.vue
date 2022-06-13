@@ -5,7 +5,7 @@
 
         <!-- CATEGORIES SECTION -->
         <div class="list-category">
-            <h1>Hello</h1>
+           
         </div>
 
         <!-- LIST MOVIES -->
