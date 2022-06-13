@@ -4,9 +4,7 @@
         <Header />
 
         <!-- CATEGORIES SECTION -->
-        <div class="list-category">
-           
-        </div>
+        <div class="list-category"></div>
 
         <!-- LIST MOVIES -->
         <div class="movies mx-16">
