@@ -185,7 +185,7 @@ export default {
             categorieList: this.categories,
         };
     },
-    props: ["movies", "categories"],
+    props: ["movies", "categories", "users"],
 };
 </script>
 

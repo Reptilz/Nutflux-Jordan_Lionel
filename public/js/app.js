@@ -22704,9 +22704,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Jetstream_ApplicationLogo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Jetstream/ApplicationLogo.vue */ "./resources/js/Jetstream/ApplicationLogo.vue");
+var __default__ = {
+  name: "Welcome",
+  data: function data() {
+    return {
+      userList: this.users
+    };
+  },
+  props: ["users"],
+  mounted: function mounted() {
+    console.log(this.users);
+  }
+};
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Welcome',
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
@@ -22719,7 +22730,7 @@ __webpack_require__.r(__webpack_exports__);
     });
     return __returned__;
   }
-});
+}));
 
 /***/ }),
 
@@ -23577,7 +23588,7 @@ __webpack_require__.r(__webpack_exports__);
       categorieList: this.categories
     };
   },
-  props: ["movies", "categories"]
+  props: ["movies", "categories", "users"]
 });
 
 /***/ }),

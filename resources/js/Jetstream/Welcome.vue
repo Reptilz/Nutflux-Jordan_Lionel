@@ -74,3 +74,19 @@ import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
         </button>
     </div>
 </template>
+
+<script>
+export default {
+    name: "Welcome",
+    data() {
+        return {
+            userList: this.users,
+        };
+    },
+    props: ["users"],
+
+    mounted() {
+        console.log(this.users);
+    },
+};
+</script>
