@@ -12,13 +12,13 @@ defineProps({
 <template>
     <Head title="Welcome" />
 
-    <!-- TAILWIND COMPONENT NETFLIX -->
+    <!-- TEMPLATE WELCOME PAGE -->
     <div class="welcome-page">
         <div
             class="template-netflix h-screen flex justify-center items-center bg-cover bg-center"
         >
             <div class="text-red-600 text-6xl absolute top-0 left-0 mt-5 ml-5">
-                <h1 id="logo">Netflux</h1>
+                <h1 id="logo">Nutflux</h1>
             </div>
             <Link :href="route('login')">
                 <button
@@ -47,8 +47,7 @@ defineProps({
                     Watch anywhere. Cancel anytime.
                 </p>
                 <p class="text-white text-lg flex flex-col items-center">
-                    Ready to watch? Enter your email to create or restart your
-                    membership.
+                    Ready to watch? Create your account now!
                 </p>
                 <div class="flex flex-row items-center justify-center">
                     <Link :href="route('register')">
