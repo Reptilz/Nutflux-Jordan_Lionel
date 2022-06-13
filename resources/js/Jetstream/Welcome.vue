@@ -6,6 +6,7 @@ import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
     <div class="bg-black h-screen flex flex-col items-center justify-center">
         <!-- Title -->
         <h1 class="text-gray-200 text-5xl">Who's watching?</h1>
+        <h2 class="text-gray-200 text-3xl">Hello</h2>
 
         <!-- Profiles -->
         <div class="flex flex-row flex-wrap gap-5 mt-8">
