@@ -54,7 +54,7 @@ defineProps({
                         <button
                             class="p-4 text-l font-semibold bg-red-600 hover:bg-red-700 text-white"
                         >
-                            Register now
+                            Join Now
                         </button>
                     </Link>
                 </div>

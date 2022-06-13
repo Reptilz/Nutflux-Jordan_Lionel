@@ -28911,7 +28911,7 @@ var _hoisted_10 = {
 var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "p-4 text-l font-semibold bg-red-600 hover:bg-red-700 text-white"
-  }, " Register now ", -1
+  }, " Join Now ", -1
   /* HOISTED */
   );
 });
