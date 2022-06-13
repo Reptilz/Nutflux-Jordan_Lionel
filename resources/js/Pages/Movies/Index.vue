@@ -4,7 +4,89 @@
         <Header />
 
         <!-- CATEGORIES SECTION -->
-        <div class="list-category"></div>
+        <div class="list-category">
+            <div class="mb-10">
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Comédie
+                </button>
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Drame
+                </button>
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Romance
+                </button>
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Action
+                </button>
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Historique
+                </button>
+                <button
+                    type="button"
+                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                    Western
+                </button>
+                
+                    <div class="group inline-block relative">
+                        <button
+                            class="bg-red-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
+                        >
+                            <span class="mr-1">...</span>
+                            <svg
+                                class="fill-current h-4 w-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                />
+                            </svg>
+                        </button>
+                        <ul
+                            class="absolute hidden text-white pt-1 group-hover:block z-10"
+                        >
+                            <li class="">
+                                <a
+                                    class="rounded-t bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
+                                    href="#"
+                                    >Comédie</a
+                                >
+                            </li>
+                            <li class="">
+                                <a
+                                    class="bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
+                                    href="#"
+                                    >Drame</a
+                                >
+                            </li>
+                            <li class="">
+                                <a
+                                    class="rounded-b bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
+                                    href="#"
+                                    >Romance</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+               
+            </div>
+        </div>
 
         <!-- LIST MOVIES -->
         <div class="movies mx-16">
