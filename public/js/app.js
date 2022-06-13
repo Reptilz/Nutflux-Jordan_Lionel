@@ -25518,16 +25518,22 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-row flex-wrap gap-5 mt-8\"><!-- Profile 1 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/a/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Tiffany</p></a><!-- Profile 2 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/b/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Jessica</p></a><!-- Profile 3 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/c/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Sunny</p></a><!-- Profile 4 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/d/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Taeyeon</p></a><!-- Add Profile --><a href=\"#\" class=\"flex flex-col items-center group gap-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-[150px] w-[150px] group-hover:bg-gray-300 border-2 border-transparent\" viewBox=\"0 0 20 20\" fill=\"#6b7280\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z\" clip-rule=\"evenodd\"></path></svg><p class=\"text-gray-500 group-hover:text-gray-300\"> Add Profile </p></a></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+  "class": "text-gray-200 text-3xl"
+}, "Hello", -1
+/* HOISTED */
+);
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-row flex-wrap gap-5 mt-8\"><!-- Profile 1 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/a/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Tiffany</p></a><!-- Profile 2 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/b/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Jessica</p></a><!-- Profile 3 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/c/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Sunny</p></a><!-- Profile 4 --><a href=\"#\" class=\"flex flex-col items-center group gap-2\"><img class=\"rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300\" src=\"https://picsum.photos/seed/d/150/150\"><p class=\"text-gray-500 group-hover:text-gray-300\">Taeyeon</p></a><!-- Add Profile --><a href=\"#\" class=\"flex flex-col items-center group gap-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-[150px] w-[150px] group-hover:bg-gray-300 border-2 border-transparent\" viewBox=\"0 0 20 20\" fill=\"#6b7280\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z\" clip-rule=\"evenodd\"></path></svg><p class=\"text-gray-500 group-hover:text-gray-300\"> Add Profile </p></a></div>", 1);
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "border-2 border-gray-600 text-gray-600 px-4 py-1 mt-20 hover:border-gray-400 hover:text-gray-400"
 }, " Manage Profiles ", -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Title "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Profiles "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Manage Profiles "), _hoisted_4]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Title "), _hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Profiles "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Manage Profiles "), _hoisted_5]);
 }
 
 /***/ }),
