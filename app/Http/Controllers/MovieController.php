@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Inertia\Inertia;
+use App\Models\Actor;
 use App\Models\Movie;
+use App\Models\Director;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
 
@@ -12,14 +13,16 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::with('categories')->get();
+        $movies = Movie::with('categories', 'actors', 'directors')->get();
         $categories = Categorie::all();
-        $users = User::all();
+        $actors = Actor::all();
+        $directors = Director::all();
 
         return Inertia::render('Movies/Index', [
             'movies' => $movies,
             'categories' => $categories,
-            'users' => $users,
+            'actors' => $actors,
+            'directors' => $directors,
         ]);
     }
 }

@@ -163,6 +163,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- OVERVIEW -->
                                         <div class="flex flex-col overview">
                                             <div class="flex flex-col"></div>
                                             <div
@@ -171,9 +173,45 @@
                                                 Overview:
                                             </div>
                                             <p
-                                                class="text-xs text-gray-100 mb-6"
+                                                class="text-xs text-gray-100 mb-4"
                                             >
                                                 {{ movie.overview }}
+                                            </p>
+                                        </div>
+
+                                        <!-- ACTORS -->
+                                        <div class="flex flex-col actors">
+                                            <div class="flex flex-col"></div>
+                                            <div
+                                                class="text-xs text-gray-400 mb-2"
+                                            >
+                                                Actors:
+                                            </div>
+                                            <p
+                                                v-for="actor in movie.actors"
+                                                :key="actor.id"
+                                                class="text-xs text-gray-100"
+                                            >
+                                                {{ actor.firstname }}
+                                                {{ actor.lastname }}
+                                            </p>
+                                        </div>
+
+                                        <!-- DIRECTORS -->
+                                        <div class="flex flex-col directors">
+                                            <div class="flex flex-col"></div>
+                                            <div
+                                                class="text-xs text-gray-400 mb-2"
+                                            >
+                                                Directors:
+                                            </div>
+                                            <p
+                                                v-for="director in movie.directors"
+                                                :key="director.id"
+                                                class="text-xs text-gray-100"
+                                            >
+                                                {{ director.firstname }}
+                                                {{ director.lastname }}
                                             </p>
                                         </div>
                                     </div>
@@ -192,7 +230,7 @@
                                 class="poster__footer flex flex-row relative pb-10 space-x-4 z-10"
                             >
                                 <a
-                                    class="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-red-700 hover:bg-red-500"
+                                    class="flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500"
                                     href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210915T010000Z%2F20210915T010000Z&amp;text=Dune%20%2D%20Movie%20Premiere&amp;location=http%3A%2F%2Fmoviedates.info&amp;details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info"
                                     target="_blank"
                                     data-unsp-sanitized="clean"
@@ -238,9 +276,11 @@ export default {
         return {
             movieList: this.movies,
             categorieList: this.categories,
+            actorList: this.actors,
+            directorList: this.directors,
         };
     },
-    props: ["movies", "categories", "users"],
+    props: ["movies", "categories", "actors", "directors"],
 };
 </script>
 
