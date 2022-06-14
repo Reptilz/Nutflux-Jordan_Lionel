@@ -181,7 +181,7 @@
 
                                         <div class="actor-director">
                                             <!-- ACTORS -->
-                                            <div class="flex flex-col  actors">
+                                            <div class="flex flex-col actors">
                                                 <div
                                                     class="flex flex-col"
                                                 ></div>
@@ -304,14 +304,12 @@ export default {
     justify-content: space-evenly;
 }
 
-.actor-director{
+.actor-director {
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: baseline;
-	align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
 }
-
-
 </style>
