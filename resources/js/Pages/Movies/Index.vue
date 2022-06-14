@@ -163,6 +163,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- OVERVIEW -->
                                         <div class="flex flex-col overview">
                                             <div class="flex flex-col"></div>
                                             <div
@@ -171,12 +173,13 @@
                                                 Overview:
                                             </div>
                                             <p
-                                                class="text-xs text-gray-100 mb-6"
+                                                class="text-xs text-gray-100 mb-4"
                                             >
                                                 {{ movie.overview }}
                                             </p>
                                         </div>
 
+                                        <!-- ACTORS -->
                                         <div class="flex flex-col actors">
                                             <div class="flex flex-col"></div>
                                             <div
@@ -191,6 +194,24 @@
                                             >
                                                 {{ actor.firstname }}
                                                 {{ actor.lastname }}
+                                            </p>
+                                        </div>
+
+                                        <!-- DIRECTORS -->
+                                        <div class="flex flex-col directors">
+                                            <div class="flex flex-col"></div>
+                                            <div
+                                                class="text-xs text-gray-400 mb-2"
+                                            >
+                                                Directors:
+                                            </div>
+                                            <p
+                                                v-for="director in movie.directors"
+                                                :key="director.id"
+                                                class="text-xs text-gray-100"
+                                            >
+                                                {{ director.firstname }}
+                                                {{ director.lastname }}
                                             </p>
                                         </div>
                                     </div>
@@ -256,9 +277,10 @@ export default {
             movieList: this.movies,
             categorieList: this.categories,
             actorList: this.actors,
+            directorList: this.directors,
         };
     },
-    props: ["movies", "categories", "actors"],
+    props: ["movies", "categories", "actors", "directors"],
 };
 </script>
 
