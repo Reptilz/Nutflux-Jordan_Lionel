@@ -179,40 +179,48 @@
                                             </p>
                                         </div>
 
-                                        <!-- ACTORS -->
-                                        <div class="flex flex-col actors">
-                                            <div class="flex flex-col"></div>
-                                            <div
-                                                class="text-xs text-gray-400 mb-2"
-                                            >
-                                                Actors:
+                                        <div class="actor-director">
+                                            <!-- ACTORS -->
+                                            <div class="flex flex-col  actors">
+                                                <div
+                                                    class="flex flex-col"
+                                                ></div>
+                                                <div
+                                                    class="text-xs text-gray-400 mb-2"
+                                                >
+                                                    Actors:
+                                                </div>
+                                                <p
+                                                    v-for="actor in movie.actors"
+                                                    :key="actor.id"
+                                                    class="text-xs text-gray-100"
+                                                >
+                                                    {{ actor.firstname }}
+                                                    {{ actor.lastname }}
+                                                </p>
                                             </div>
-                                            <p
-                                                v-for="actor in movie.actors"
-                                                :key="actor.id"
-                                                class="text-xs text-gray-100"
-                                            >
-                                                {{ actor.firstname }}
-                                                {{ actor.lastname }}
-                                            </p>
-                                        </div>
 
-                                        <!-- DIRECTORS -->
-                                        <div class="flex flex-col directors">
-                                            <div class="flex flex-col"></div>
+                                            <!-- DIRECTORS -->
                                             <div
-                                                class="text-xs text-gray-400 mb-2"
+                                                class="flex flex-col mr-7 directors"
                                             >
-                                                Directors:
+                                                <div
+                                                    class="flex flex-col"
+                                                ></div>
+                                                <div
+                                                    class="text-xs text-gray-400 mb-2"
+                                                >
+                                                    Directors:
+                                                </div>
+                                                <p
+                                                    v-for="director in movie.directors"
+                                                    :key="director.id"
+                                                    class="text-xs text-gray-100"
+                                                >
+                                                    {{ director.firstname }}
+                                                    {{ director.lastname }}
+                                                </p>
                                             </div>
-                                            <p
-                                                v-for="director in movie.directors"
-                                                :key="director.id"
-                                                class="text-xs text-gray-100"
-                                            >
-                                                {{ director.firstname }}
-                                                {{ director.lastname }}
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -295,4 +303,15 @@ export default {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+
+.actor-director{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+}
+
+
 </style>
