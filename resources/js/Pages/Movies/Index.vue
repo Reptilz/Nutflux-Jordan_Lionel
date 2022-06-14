@@ -7,84 +7,45 @@
         <div class="list-category">
             <div class="mb-10">
                 <button
+                    v-for="cat in this.categorieList.slice(0, 7)"
+                    :key="cat.id"
                     type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    class="text-white bg-gradient-to-br bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                 >
-                    Comédie
+                    {{ cat.name }}
                 </button>
-                <button
-                    type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
-                    Drame
-                </button>
-                <button
-                    type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
-                    Romance
-                </button>
-                <button
-                    type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
-                    Action
-                </button>
-                <button
-                    type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
-                    Historique
-                </button>
-                <button
-                    type="button"
-                    class="text-white bg-gradient-to-br bg-red-500  hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
-                    Western
-                </button>
-                
-                    <div class="group inline-block relative">
-                        <button
-                            class="bg-red-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
+
+                <div class="group inline-block relative">
+                    <button
+                        class="bg-red-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center hover:bg-red-500"
+                    >
+                        <span class="mr-1">...</span>
+                        <svg
+                            class="fill-current h-4 w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
                         >
-                            <span class="mr-1">...</span>
-                            <svg
-                                class="fill-current h-4 w-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
+                            <path
+                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                            />
+                        </svg>
+                    </button>
+                    <ul
+                        class="absolute hidden text-white pt-1 group-hover:block z-10"
+                    >
+                        <li
+                            class="cat"
+                            v-for="(cat, index) in this.categorieList"
+                            :key="index"
+                        >
+                            <a
+                                class="rounded-t bg-red-700 hover:bg-red-500 py-2 px-4 block whitespace-no-wrap"
+                                href="#"
+                                >{{ cat.name }}</a
                             >
-                                <path
-                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                />
-                            </svg>
-                        </button>
-                        <ul
-                            class="absolute hidden text-white pt-1 group-hover:block z-10"
-                        >
-                            <li class="">
-                                <a
-                                    class="rounded-t bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
-                                    href="#"
-                                    >Comédie</a
-                                >
-                            </li>
-                            <li class="">
-                                <a
-                                    class="bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
-                                    href="#"
-                                    >Drame</a
-                                >
-                            </li>
-                            <li class="">
-                                <a
-                                    class="rounded-b bg-red-500 hover:bg-red-700 py-2 px-4 block whitespace-no-wrap"
-                                    href="#"
-                                    >Romance</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-               
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -120,7 +81,7 @@
                                             class="flex flex-col space-y-2 inner"
                                         >
                                             <a
-                                                class="relative flex items-center w-min flex-shrink-0 p-1 text-center text-white bg-red-500 rounded-full group-hover:bg-red-700"
+                                                class="relative flex items-center w-min flex-shrink-0 p-1 text-center text-white bg-red-700 rounded-full group-hover:bg-red-500"
                                                 data-unsp-sanitized="clean"
                                             >
                                                 <svg
@@ -219,7 +180,7 @@
                                 class="poster__footer flex flex-row relative pb-10 space-x-4 z-10"
                             >
                                 <a
-                                    class="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-red-500 hover:bg-red-700"
+                                    class="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-red-700 hover:bg-red-500"
                                     href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210915T010000Z%2F20210915T010000Z&amp;text=Dune%20%2D%20Movie%20Premiere&amp;location=http%3A%2F%2Fmoviedates.info&amp;details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info"
                                     target="_blank"
                                     data-unsp-sanitized="clean"
@@ -267,7 +228,7 @@ export default {
             categorieList: this.categories,
         };
     },
-    props: ["movies", "categories"],
+    props: ["movies", "categories", "users"],
 };
 </script>
 

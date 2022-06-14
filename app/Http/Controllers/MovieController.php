@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Inertia\Inertia;
 use App\Models\Movie;
 use App\Models\Categorie;
@@ -13,10 +14,12 @@ class MovieController extends Controller
     {
         $movies = Movie::with('categories')->get();
         $categories = Categorie::all();
+        $users = User::all();
 
         return Inertia::render('Movies/Index', [
             'movies' => $movies,
-            'categories' => $categories
+            'categories' => $categories,
+            'users' => $users,
         ]);
     }
 }
