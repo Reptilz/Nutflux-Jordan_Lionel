@@ -15,7 +15,7 @@
                     {{ cat.name }}
                 </button>
 
-                <div class="group inline-block relative">
+                <div class="group-cat group inline-block relative">
                     <button
                         class="bg-red-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center hover:bg-red-500"
                     >
@@ -126,6 +126,18 @@
                                             <div
                                                 class="flex flex-col datos_col"
                                             ></div>
+                                            <div
+                                                class="flex flex-col datos_col"
+                                            >
+                                                <div class="release">
+                                                    {{ movie.rating }}/10
+                                                </div>
+                                                <div
+                                                    class="text-sm text-gray-400"
+                                                >
+                                                    Rating:
+                                                </div>
+                                            </div>
                                             <div
                                                 class="flex flex-col datos_col"
                                             >
