@@ -72,6 +72,7 @@ const logout = () => {
                                 >
                                     Movies
                                 </jet-nav-link>
+                    
                             </div>
                         </div>
 
