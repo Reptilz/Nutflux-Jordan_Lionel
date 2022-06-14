@@ -37,3 +37,5 @@ Route::middleware([
 
 //Route des movies
 Route::get('/movies', 'App\Http\Controllers\MovieController@index')->name('movies.index');
+
+Route::get('/show', 'App\Http\Controllers\MovieController@show')->name('movies.show');

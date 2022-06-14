@@ -25,4 +25,18 @@ class MovieController extends Controller
             'directors' => $directors,
         ]);
     }
+
+    public function show(){
+        $movies = Movie::with('categories', 'actors', 'directors')->get();
+        $categories = Categorie::all();
+        $actors = Actor::all();
+        $directors = Director::all();
+
+        return Inertia::render('Movies/Show', [
+            'movies' => $movies,
+            'categories' => $categories,
+            'actors' => $actors,
+            'directors' => $directors,
+        ]);
+    }
 }
