@@ -23585,10 +23585,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       movieList: this.movies,
-      categorieList: this.categories
+      categorieList: this.categories,
+      actorList: this.actors
     };
   },
-  props: ["movies", "categories", "users"]
+  props: ["movies", "categories", "actors"]
 });
 
 /***/ }),
@@ -27634,13 +27635,33 @@ var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_34 = {
   "class": "text-xs text-gray-100 mb-6"
 };
-var _hoisted_35 = ["src", "alt"];
+var _hoisted_35 = {
+  "class": "flex flex-col actors"
+};
 
 var _hoisted_36 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex flex-col"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "text-xs text-gray-400 mb-2"
+  }, " Actors: ", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_38 = ["src", "alt"];
+
+var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "poster__footer flex flex-row relative pb-10 space-x-4 z-10"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    "class": "flex items-center py-2 px-4 rounded-full mx-auto text-white bg-red-700 hover:bg-red-500",
+    "class": "flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500",
     href: "http://www.google.com/calendar/event?action=TEMPLATE&dates=20210915T010000Z%2F20210915T010000Z&text=Dune%20%2D%20Movie%20Premiere&location=http%3A%2F%2Fmoviedates.info&details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info",
     target: "_blank",
     "data-unsp-sanitized": "clean"
@@ -27714,7 +27735,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         ), _hoisted_30])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(movie.overview), 1
         /* TEXT */
-        )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [_hoisted_36, _hoisted_37, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(movie.actors, function (actor) {
+          return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
+            key: actor.id,
+            "class": "text-xs text-gray-100"
+          }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(actor.firstname) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(actor.lastname), 1
+          /* TEXT */
+          );
+        }), 128
+        /* KEYED_FRAGMENT */
+        ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
           "class": "absolute inset-0 transform w-full -translate-y-4",
           src: __webpack_require__("./public/images sync recursive ^\\.\\/.*$")("./" + movie.image)["default"],
           alt: "".concat(movie.title),
@@ -27723,7 +27753,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           }
         }, null, 8
         /* PROPS */
-        , _hoisted_35), _hoisted_36])])])]);
+        , _hoisted_38), _hoisted_39])])])]);
       }), 128
       /* KEYED_FRAGMENT */
       ))])];
