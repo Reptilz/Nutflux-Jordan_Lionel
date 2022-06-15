@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <template>
     <AppLayout>
         <div class="details bg-black pt-10">
@@ -83,4 +81,3 @@ div {
     align-content: stretch;
 }
 </style>
->>>>>>> 6b599f31a29286e081a0fa5c07ada9561f99b2da
