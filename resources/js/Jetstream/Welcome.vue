@@ -10,15 +10,6 @@ import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
 
         <!-- Profiles -->
         <div class="flex flex-row flex-wrap gap-5 mt-8">
-            <!-- Profile 1 -->
-            <a href="#" class="flex flex-col items-center group gap-2">
-                <img
-                    class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
-                    src="https://picsum.photos/seed/a/150/150"
-                />
-                <p class="text-gray-500 group-hover:text-gray-300">Tiffany</p>
-            </a>
-
             <!-- Profile 2 -->
             <a href="#" class="flex flex-col items-center group gap-2">
                 <img
