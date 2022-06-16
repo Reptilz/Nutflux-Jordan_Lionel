@@ -303,6 +303,14 @@
                     </div>
                 </div>
             </div>
+            <!-- NO RESULT SEARCH -->
+            <div
+                class="no-search text-white text-center col-span-3"
+                v-if="filterList.length == []"
+            >
+                <h3 class="text-6xl mb-6 mt-8">Sorry :(</h3>
+                <p class="text-3xl mb-12">No result found...</p>
+            </div>
         </div>
     </AppLayout>
 </template>

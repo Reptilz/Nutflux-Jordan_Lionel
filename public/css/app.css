@@ -996,6 +996,9 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
 .float-left {
   float: left;
 }
@@ -1118,6 +1121,9 @@ select {
 }
 .mb-20 {
   margin-bottom: 5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .block {
   display: block;
