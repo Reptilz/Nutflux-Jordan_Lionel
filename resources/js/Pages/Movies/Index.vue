@@ -77,7 +77,7 @@
                             v-model="searchKey"
                             type="search"
                             id="default-search"
-                            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-red-700 focus:border-red-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
+                            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-red-700 focus:border-red-700 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-gray-500 dark:focus:border-red-500"
                             placeholder="Search Movies..."
                             required
                         />
@@ -276,7 +276,6 @@
                             >
                                 <a
                                     class="flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500"
-                
                                     target="_blank"
                                     data-unsp-sanitized="clean"
                                 >
