@@ -276,7 +276,7 @@
                             >
                                 <a
                                     class="flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500"
-                                    href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210915T010000Z%2F20210915T010000Z&amp;text=Dune%20%2D%20Movie%20Premiere&amp;location=http%3A%2F%2Fmoviedates.info&amp;details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info"
+                
                                     target="_blank"
                                     data-unsp-sanitized="clean"
                                 >

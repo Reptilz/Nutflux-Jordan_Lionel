@@ -9,7 +9,7 @@ import { Link } from "@inertiajs/inertia-vue3";
             <h1 id="back">Back ➔</h1>
         </Link>
 
-        <div class="details bg-black pt-10">
+        <div class="details bg-black  pt-10">
             <img
                 class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110"
                 src="../../../../public/images/harry_potter_6.jpg"
@@ -90,6 +90,7 @@ div {
 img {
     height: 500px;
     width: 400px;
+    
 }
 
 .info {

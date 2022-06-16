@@ -27768,7 +27768,6 @@ var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
     "class": "poster__footer flex flex-row relative pb-10 space-x-4 z-10"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500",
-    href: "http://www.google.com/calendar/event?action=TEMPLATE&dates=20210915T010000Z%2F20210915T010000Z&text=Dune%20%2D%20Movie%20Premiere&location=http%3A%2F%2Fmoviedates.info&details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info",
     target: "_blank",
     "data-unsp-sanitized": "clean"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
