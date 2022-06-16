@@ -4,12 +4,11 @@ import { Link } from "@inertiajs/inertia-vue3";
 
 <template>
     <AppLayout>
-        <!-- BACK -->
-        <Link :href="'/movies'">
-            <h1 id="back">Back ➔</h1>
-        </Link>
-
         <div class="details bg-black pt-10">
+            <!-- BACK -->
+            <Link :href="'/movies'">
+                <h1 id="back">Back ➔</h1>
+            </Link>
             <img
                 class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110"
                 src="../../../../public/images/harry_potter_6.jpg"
@@ -76,7 +75,7 @@ export default {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 50px;
     margin-bottom: 50px;
     &:hover {
         opacity: 0.5;
