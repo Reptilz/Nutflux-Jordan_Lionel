@@ -1,15 +1,24 @@
+<script setup>
+import { Link } from "@inertiajs/inertia-vue3";
+</script>
+
 <template>
     <AppLayout>
+        <!-- BACK -->
+        <Link :href="'/movies'">
+            <h1 id="back">Back ➔</h1>
+        </Link>
+
         <div class="details bg-black pt-10">
             <img
-                class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110 "
+                class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110"
                 src="../../../../public/images/harry_potter_6.jpg"
                 alt=""
             />
             <div>
                 <h1 class="text-3xl">Harry Potter 6</h1>
                 <ul class="info">
-                    <li class="pr-7 pt-5 pb-7"> ⭐ 9/10</li>
+                    <li class="pr-7 pt-5 pb-7">⭐ 9/10</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
                     <li class="pr-7 pt-5 pb-7">2020 / 02 / 22</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
@@ -51,6 +60,7 @@
 
 <script>
 import AppLayout from "./../../Layouts/AppLayout.vue";
+
 export default {
     name: "Show",
     components: {
@@ -60,13 +70,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#back {
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
 div {
     color: white;
 }
 
-img{
+img {
     height: 500px;
-    width:400px;
+    width: 400px;
 }
 
 .info {
