@@ -23596,7 +23596,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       return this.movieList.filter(function (movie) {
-        return movie.name.toLowerCase().includes(_this.searchKey.toLowerCase());
+        return movie.title.toLowerCase().includes(_this.searchKey.toLowerCase());
       });
     }
   },

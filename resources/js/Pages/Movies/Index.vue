@@ -329,7 +329,7 @@ export default {
     computed: {
         filterList() {
             return this.movieList.filter((movie) => {
-                return movie.name
+                return movie.title
                     .toLowerCase()
                     .includes(this.searchKey.toLowerCase());
             });
