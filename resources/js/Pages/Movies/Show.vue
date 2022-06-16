@@ -76,8 +76,8 @@ export default {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top:40px;
+    margin-bottom: 25px;
     &:hover {
         opacity: 0.5;
     }
