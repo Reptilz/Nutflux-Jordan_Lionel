@@ -295,7 +295,10 @@
                                         ></path>
                                     </svg>
                                     <div class="text-sm text-white ml-2">
-                                        Show
+                                        <router-link :to="{name: 'movies.show', params: { id: movies.id}}">
+                                            Show
+                                        </router-link>
+                                        
                                     </div>
                                 </a>
                             </div>
