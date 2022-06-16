@@ -1,24 +1,22 @@
-<<<<<<< HEAD
-=======
 <template>
     <AppLayout>
         <div class="details bg-black pt-10">
             <img
-                class="float-left ml-20 pr-10"
+                class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110 "
                 src="../../../../public/images/harry_potter_6.jpg"
                 alt=""
             />
             <div>
                 <h1 class="text-3xl">Harry Potter 6</h1>
                 <ul class="info">
-                    <li class="pr-7 pt-5 pb-7">9/10</li>
+                    <li class="pr-7 pt-5 pb-7"> ⭐ 9/10</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
-                    <li class="pr-7 pt-5 pb-7">2020/02/22</li>
+                    <li class="pr-7 pt-5 pb-7">2020 / 02 / 22</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
                     <li class="pr-7 pt-5 pb-7">Fantasy</li>
                 </ul>
 
-                <p class="py-10">
+                <p class="py-10 w-3/4">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Aspernatur minus exercitationem odio facere, necessitatibus
                     autem. Sunt obcaecati eum odit facere neque et rem
@@ -35,7 +33,7 @@
                         <p>Emma Watson</p>
                     </div>
                     <div>
-                        <div>directors :</div>
+                        <div>Directors :</div>
                         <p>Sam Raimi</p>
                     </div>
                 </div>
@@ -66,6 +64,11 @@ div {
     color: white;
 }
 
+img{
+    height: 500px;
+    width:400px;
+}
+
 .info {
     display: flex;
     flex-direction: row;
@@ -83,4 +86,3 @@ div {
     align-content: stretch;
 }
 </style>
->>>>>>> 6b599f31a29286e081a0fa5c07ada9561f99b2da
