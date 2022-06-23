@@ -1,3 +1,7 @@
+<script setup>
+import { Link } from "@inertiajs/inertia-vue3";
+</script>
+
 <template>
     <AppLayout>
         <!-- COMPONENT HEADER -->
@@ -274,8 +278,11 @@
                             <div
                                 class="poster__footer flex flex-row relative pb-10 space-x-4 z-10"
                             >
+                              
+
                                 <a
                                     class="flex items-center py-2 px-4 rounded-full mx-auto mt-8 text-white bg-red-700 hover:bg-red-500"
+                                   
                                     target="_blank"
                                     data-unsp-sanitized="clean"
                                 >
@@ -293,13 +300,13 @@
                                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                         ></path>
                                     </svg>
+                                    <Link :href="route('movies.show',{ id: movie.id })">
                                     <div class="text-sm text-white ml-2">
-                                        <router-link :to="{name: 'movies.show', params: { id: movies.id}}">
-                                            Show
-                                        </router-link>
-                                        
+                                        Show
                                     </div>
+                                    </Link>
                                 </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -348,6 +355,7 @@ export default {
 
     props: ["movies", "categories", "actors", "directors"],
 };
+
 </script>
 
 <style lang="scss" scoped>

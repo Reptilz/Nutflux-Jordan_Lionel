@@ -9,51 +9,57 @@ import { Link } from "@inertiajs/inertia-vue3";
             <h1 id="back">Back ➔</h1>
         </Link>
 
-        <div class="details bg-black  pt-10">
+        <div class="details bg-black pt-10">
             <img
                 class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110"
-                src="../../../../public/images/harry_potter_6.jpg"
+                :src="
+                    require('../../../../public/images/' + movies.image).default
+                "
                 alt=""
             />
             <div>
-                <h1 class="text-3xl">Harry Potter 6</h1>
+                <h1 class="text-3xl">{{ movies.title }}</h1>
                 <ul class="info">
-                    <li class="pr-7 pt-5 pb-7">⭐ 9/10</li>
+                    <li class="pr-7 pt-5 pb-7">⭐ {{ movies.rating }}/10</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
-                    <li class="pr-7 pt-5 pb-7">2020 / 02 / 22</li>
+                    <li class="pr-7 pt-5 pb-7">{{ movies.dateReview }}</li>
                     <li class="pr-7 pt-5 pb-7">|</li>
-                    <li class="pr-7 pt-5 pb-7">Fantasy</li>
+                    <li
+                        class="pr-7 pt-5 pb-7"
+                        v-for="movie in movies.categories"
+                        :key="movie.id"
+                    >
+                        {{ movie.name }}
+                    </li>
                 </ul>
 
                 <p class="py-10 w-3/4">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Aspernatur minus exercitationem odio facere, necessitatibus
-                    autem. Sunt obcaecati eum odit facere neque et rem
-                    distinctio, suscipit officiis vitae, fuga atque nam. Itaque
-                    obcaecati nobis quo sit mollitia porro, blanditiis earum
-                    consequuntur saepe ab. Sunt laboriosam impedit, sint ab
-                    voluptatem illum quidem nobis recusandae non earum quos
-                    officiis natus laborum rerum necessitatibus.
+                    {{ movies.overview }}
                 </p>
 
                 <div class="actors-directors">
                     <div class="mr-10">
                         <div>Actors :</div>
-                        <p>Emma Watson</p>
+                        <p v-for="movie in movies.actors" :key="movie.id">
+                            {{ movie.firstname }} {{ movie.lastname }}
+                        </p>
                     </div>
                     <div>
                         <div>Directors :</div>
-                        <p>Sam Raimi</p>
+                        <p v-for="movie in movies.directors" :key="movie.id">
+                            {{ movie.firstname }} {{ movie.lastname }}
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <button
-                type="button"
-                class="text-white bg-gradient-to-br bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-10 mr-2 mb-2"
-            >
-                Play Trailer
-            </button>
+            <button class="trigger mt-10 bg-red-700 p-3 rounded hover:bg-red-500">Play Trailer</button>
+            <div class="modal">
+                <div class="modal-content ">
+                    <span class="close-button mb-2">×</span>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-FZ-pPFAjYY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </AppLayout>
 </template>
@@ -66,6 +72,31 @@ export default {
     components: {
         AppLayout,
     },
+    mounted() {
+        // let run = document.getElementById("run");
+
+        // run.addEventListener("click", () => {
+        //     const div = document.createElement("div");
+        // });
+        const modal = document.querySelector(".modal");
+        const trigger = document.querySelector(".trigger");
+        const closeButton = document.querySelector(".close-button");
+
+        function toggleModal() {
+            modal.classList.toggle("show-modal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+    },
+    props: ["movies", "categories", "actors", "directors"],
 };
 </script>
 
@@ -90,7 +121,6 @@ div {
 img {
     height: 500px;
     width: 400px;
-    
 }
 
 .info {
@@ -108,5 +138,49 @@ img {
     justify-content: flex-start;
     align-items: baseline;
     align-content: stretch;
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 600px;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 </style>
