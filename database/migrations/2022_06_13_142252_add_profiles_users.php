@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
         Schema::table('users', function ($table) {
-            $table->foreignId('profil_id')
+            $table->foreignId('profile_id')
                 ->constrained()
                 ->onUpdate('restrict')
                 ->onDelete('restrict');

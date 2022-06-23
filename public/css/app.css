@@ -2301,6 +2301,11 @@ select {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
   }
+
+  .dark\:focus\:ring-red-900:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(127 29 29 / var(--tw-ring-opacity));
+  }
 }
 @media (min-width: 640px) {
 

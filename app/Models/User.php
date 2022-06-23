@@ -60,8 +60,8 @@ class User extends Authenticatable
     ];
 
 
-    public function profil()
+    public function utilisateurs()
     {
-        return $this->belongsTo(Profil::class);
+        return $this->hasMany(Utilisateur::class);
     }
 }
