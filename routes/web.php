@@ -45,3 +45,5 @@ Route::post('/create', 'App\Http\Controllers\UtilisateurController@store')->name
 
 //Route des movies
 Route::get('/movies', 'App\Http\Controllers\MovieController@index')->name('movies.index');
+
+Route::get('show/{id}', 'App\Http\Controllers\MovieController@show')->name('movies.show');

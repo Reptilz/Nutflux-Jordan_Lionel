@@ -1763,13 +1763,13 @@ select {
   font-size: 3rem;
   line-height: 1;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -2292,19 +2292,14 @@ select {
     border-color: rgb(239 68 68 / var(--tw-border-opacity));
   }
 
-  .dark\:focus\:ring-pink-800:focus {
+  .dark\:focus\:ring-red-900:focus {
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(157 23 77 / var(--tw-ring-opacity));
+    --tw-ring-color: rgb(127 29 29 / var(--tw-ring-opacity));
   }
 
   .dark\:focus\:ring-gray-500:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
-  }
-
-  .dark\:focus\:ring-red-900:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(127 29 29 / var(--tw-ring-opacity));
   }
 }
 @media (min-width: 640px) {
