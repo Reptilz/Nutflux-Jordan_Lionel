@@ -34,8 +34,14 @@ Route::middleware([
     })->name('dashboard');
 });
 
+//Lie les utilisateurs à la vue dashboard
+Route::get('/dashboard', 'App\Http\Controllers\UtilisateurController@index')->name('dashboard');
+
+//Affiche la vue Create des Utilisateurs
+Route::get('/create', 'App\Http\Controllers\UtilisateurController@create')->name('utilisateurs.create');
+
+//Création d'un utilisateur
+Route::post('/create', 'App\Http\Controllers\UtilisateurController@store')->name('utilisateurs.store');
 
 //Route des movies
 Route::get('/movies', 'App\Http\Controllers\MovieController@index')->name('movies.index');
-
-Route::get('/show/{id}', 'App\Http\Controllers\MovieController@show')->name('movies.show');

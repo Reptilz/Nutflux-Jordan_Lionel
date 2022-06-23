@@ -1,44 +1,36 @@
 <script setup>
 import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
+import { Link } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
     <div class="bg-black h-screen flex flex-col items-center justify-center">
         <!-- Title -->
         <h1 class="text-gray-200 text-5xl">Who's watching?</h1>
-        <h2 class="text-gray-200 text-3xl">Hello</h2>
 
-        <!-- Profiles -->
+        <!-- Profiles Card -->
         <div class="flex flex-row flex-wrap gap-5 mt-8">
-            <!-- Profile 2 -->
-            <a href="#" class="flex flex-col items-center group gap-2">
+            <!-- Profil -->
+            <a
+                href="#"
+                class="flex flex-col items-center group gap-2"
+                v-for="utilisateur in utilisateurs"
+                :key="utilisateur.id"
+            >
                 <img
                     class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
-                    src="https://picsum.photos/seed/b/150/150"
+                    :src="`https://picsum.photos/seed/${generateRandomLetter()}/150/150`"
                 />
-                <p class="text-gray-500 group-hover:text-gray-300">Jessica</p>
-            </a>
-
-            <!-- Profile 3 -->
-            <a href="#" class="flex flex-col items-center group gap-2">
-                <img
-                    class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
-                    src="https://picsum.photos/seed/c/150/150"
-                />
-                <p class="text-gray-500 group-hover:text-gray-300">Sunny</p>
-            </a>
-
-            <!-- Profile 4 -->
-            <a href="#" class="flex flex-col items-center group gap-2">
-                <img
-                    class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
-                    src="https://picsum.photos/seed/d/150/150"
-                />
-                <p class="text-gray-500 group-hover:text-gray-300">Taeyeon</p>
+                <p class="text-gray-500 group-hover:text-gray-300">
+                    {{ utilisateur.username }}
+                </p>
             </a>
 
             <!-- Add Profile -->
-            <a href="#" class="flex flex-col items-center group gap-3">
+            <Link
+                :href="route('utilisateurs.create')"
+                class="flex flex-col items-center group gap-3"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-[150px] w-[150px] group-hover:bg-gray-300 border-2 border-transparent"
@@ -54,7 +46,7 @@ import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
                 <p class="text-gray-500 group-hover:text-gray-300">
                     Add Profile
                 </p>
-            </a>
+            </Link>
         </div>
 
         <!-- Manage Profiles -->
@@ -69,15 +61,13 @@ import JetApplicationLogo from "@/Jetstream/ApplicationLogo.vue";
 <script>
 export default {
     name: "Welcome",
-    data() {
-        return {
-            userList: this.users,
-        };
-    },
-    props: ["users"],
+    props: ["user", "utilisateurs"],
 
-    mounted() {
-        console.log(this.users);
+    methods: {
+        generateRandomLetter() {
+            const alphabet = "abcdefghijklmnopqrstuvwxyz";
+            return alphabet[Math.floor(Math.random() * alphabet.length)];
+        },
     },
 };
 </script>

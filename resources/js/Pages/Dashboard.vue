@@ -5,6 +5,13 @@ import Welcome from "@/Jetstream/Welcome.vue";
 
 <template>
     <AppLayout title="Dashboard">
-        <Welcome />
+        <Welcome :user="user" :utilisateurs="utilisateurs" />
     </AppLayout>
 </template>
+
+<script>
+export default {
+    name: "Dashboard",
+    props: ["user", "utilisateurs"],
+};
+</script>

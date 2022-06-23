@@ -10,7 +10,8 @@
                     v-for="cat in this.categorieList.slice(0, 7)"
                     :key="cat.id"
                     type="button"
-                    class="text-white bg-gradient-to-br bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    class="text-white bg-gradient-to-br bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-red-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    @click="selectedCat(cat.id)"
                 >
                     {{ cat.name }}
                 </button>
@@ -331,7 +332,13 @@ export default {
             actorList: this.actors,
             directorList: this.directors,
             searchKey: "",
+            selectedCategory: "",
         };
+    },
+    methods: {
+        selectedCat(id) {
+            this.selectedCategory = id;
+        },
     },
     computed: {
         filterList() {
@@ -340,6 +347,12 @@ export default {
                     .toLowerCase()
                     .includes(this.searchKey.toLowerCase());
             });
+        },
+
+        filterCategory() {
+            return this.movieList.filter(
+                (item) => item.id == this.selectedCategory
+            );
         },
     },
 
