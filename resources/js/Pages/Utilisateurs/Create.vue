@@ -1,9 +1,14 @@
+
+
 <template>
-    <form @submit.prevent="submit">
+    <AppLayout>
+        <form @submit.prevent="submit">
         <label for="username">Username:</label>
         <input id="username" v-model="form.username" />
         <button type="submit">Submit</button>
     </form>
+    
+    </AppLayout>
 </template>
 
 <script>
@@ -32,4 +37,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+   form{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+     
+     label{
+        color:white;
+     }
+    button{ 
+    color:white;
+   }  
+   }  
+               
+</style>
