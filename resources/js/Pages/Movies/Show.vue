@@ -53,11 +53,23 @@ import { Link } from "@inertiajs/inertia-vue3";
                 </div>
             </div>
 
-            <button class="trigger mt-10 bg-red-700 p-3 rounded hover:bg-red-500">Play Trailer</button>
+            <button
+                class="trigger mt-10 bg-red-700 p-3 rounded hover:bg-red-500"
+            >
+                Play Trailer
+            </button>
             <div class="modal">
-                <div class="modal-content ">
+                <div class="modal-content">
                     <span class="close-button mb-2">×</span>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-FZ-pPFAjYY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/-FZ-pPFAjYY?controls=0"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
                 </div>
             </div>
         </div>

@@ -25740,7 +25740,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Add Profile "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Add Profile "), $props.utilisateurs.length < 3 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Link"], {
+    key: 0,
     href: _ctx.route('utilisateurs.create'),
     "class": "flex flex-col items-center group gap-3"
   }, {
@@ -25752,7 +25753,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Manage Profiles "), _hoisted_8]);
+  , ["href"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Manage Profiles "), _hoisted_8]);
 }
 
 /***/ }),
@@ -28181,7 +28182,7 @@ var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "trigger mt-10 bg-red-700 p-3 rounded hover:bg-red-500"
-  }, "Play Trailer", -1
+  }, " Play Trailer ", -1
   /* HOISTED */
   );
 });
