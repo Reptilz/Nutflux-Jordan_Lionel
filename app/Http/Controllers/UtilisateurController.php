@@ -38,7 +38,7 @@ class UtilisateurController extends Controller
         Utilisateur::create(
             Request::validate([
                 'username' => ['required', 'max:50'],
-                'user_id' => ['required', 'max:50'],
+                'user_id' => ['int'],
             ])
         );
 

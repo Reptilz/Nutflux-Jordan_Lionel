@@ -11,20 +11,21 @@ import { Link } from "@inertiajs/inertia-vue3";
         <!-- Profiles Card -->
         <div class="flex flex-row flex-wrap gap-5 mt-8">
             <!-- Profil -->
-            <a
-                href="#"
-                class="flex flex-col items-center group gap-2"
-                v-for="utilisateur in utilisateurs"
-                :key="utilisateur.id"
-            >
-                <img
-                    class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
-                    :src="`https://picsum.photos/seed/${generateRandomLetter()}/150/150`"
-                />
-                <p class="text-gray-500 group-hover:text-gray-300">
-                    {{ utilisateur.username }}
-                </p>
-            </a>
+            <Link :href="route('movies.index')">
+                <div
+                    class="flex flex-col items-center group gap-2"
+                    v-for="utilisateur in utilisateurs"
+                    :key="utilisateur.id"
+                >
+                    <img
+                        class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
+                        :src="`https://picsum.photos/seed/${generateRandomLetter()}/150/150`"
+                    />
+                    <p class="text-gray-500 group-hover:text-gray-300">
+                        {{ utilisateur.username }}
+                    </p>
+                </div>
+            </Link>
 
             <!-- Add Profile -->
             <Link

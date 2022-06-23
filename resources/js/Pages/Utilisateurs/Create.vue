@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="submit">
-        <label for="username">First name:</label>
+        <label for="username">Username:</label>
         <input id="username" v-model="form.username" />
         <button type="submit">Submit</button>
     </form>
@@ -15,10 +15,12 @@ export default {
     components: {
         AppLayout,
     },
-    setup() {
+    props: ["user"],
+
+    setup(props) {
         const form = reactive({
             username: null,
-            user_id: user().id,
+            user_id: props.user.id,
         });
 
         function submit() {
@@ -30,4 +32,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
