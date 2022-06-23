@@ -29,6 +29,7 @@ import { Link } from "@inertiajs/inertia-vue3";
 
             <!-- Add Profile -->
             <Link
+                v-if="utilisateurs.length < 3"
                 :href="route('utilisateurs.create')"
                 class="flex flex-col items-center group gap-3"
             >
