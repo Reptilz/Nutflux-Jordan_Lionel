@@ -9,11 +9,11 @@ import { Link } from "@inertiajs/inertia-vue3";
         <h1 class="text-gray-200 text-5xl">Who's watching?</h1>
 
         <!-- Profiles Card -->
-        <div class="flex flex-row flex-wrap gap-5 mt-8">
+        <div class="flex flex-row flex-wrap gap-5 mt-8 ml-3 mr-3">
             <!-- Profil -->
-            <Link :href="route('movies.index')">
+             <Link class="align" :href="route('movies.index')">
                 <div
-                    class="flex flex-col items-center group gap-2"
+                    class="m-7"
                     v-for="utilisateur in utilisateurs"
                     :key="utilisateur.id"
                 >
@@ -21,7 +21,7 @@ import { Link } from "@inertiajs/inertia-vue3";
                         class="rounded border-2 border-transparent group-hover:border-2 group-hover:border-gray-300"
                         :src="`https://picsum.photos/seed/${generateRandomLetter()}/150/150`"
                     />
-                    <p class="text-gray-500 group-hover:text-gray-300">
+                    <p class="text-gray-500 text-xl group-hover:text-gray-300">
                         {{ utilisateur.username }}
                     </p>
                 </div>
@@ -73,3 +73,15 @@ export default {
     },
 };
 </script>
+
+
+<style>
+.align{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch;
+}
+</style>

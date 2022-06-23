@@ -1,13 +1,19 @@
-
-
 <template>
     <AppLayout>
-        <form @submit.prevent="submit">
-        <label for="username">Username:</label>
-        <input id="username" v-model="form.username" />
-        <button type="submit">Submit</button>
-    </form>
-    
+        <!-- BACK -->
+
+        <form class="flex h-screen" @submit.prevent="submit">
+            <div class="m-auto">
+                <!-- <label class="text-xl m-3" for="username">Username:</label> -->
+                <input class="p-3" placeholder="Username" id="username" v-model="form.username" />
+                <button
+                    class="bg-red-700 p-3 rounded hover:bg-red-500"
+                    type="submit"
+                >
+                    Submit
+                </button>
+            </div>
+        </form>
     </AppLayout>
 </template>
 
@@ -38,20 +44,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   form{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-     
-     label{
-        color:white;
-     }
-    button{ 
-    color:white;
-   }  
-   }  
-               
+form {
+    label {
+        color: white;
+    }
+    button {
+        color: white;
+    }
+}
 </style>
