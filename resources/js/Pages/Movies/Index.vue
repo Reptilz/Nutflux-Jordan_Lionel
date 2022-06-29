@@ -42,6 +42,7 @@ import { Link } from "@inertiajs/inertia-vue3";
                             class="cat"
                             v-for="(cat, index) in this.categorieList"
                             :key="index"
+                            @click="selectedCat(cat.id)"
                         >
                             <a
                                 class="rounded-t bg-red-700 hover:bg-red-500 py-2 px-4 block whitespace-no-wrap"
@@ -315,6 +316,7 @@ import { Link } from "@inertiajs/inertia-vue3";
                     </div>
                 </div>
             </div>
+
             <!-- NO RESULT SEARCH -->
             <div
                 class="no-search text-white text-center col-span-3"
@@ -363,7 +365,7 @@ export default {
 
         filterCategory() {
             return this.movieList.filter(
-                (item) => item.id == this.selectedCategory
+                (item) => item.categories[0].id == this.selectedCategory
             );
         },
     },
