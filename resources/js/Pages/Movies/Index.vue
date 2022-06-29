@@ -1,8 +1,9 @@
 <script setup>
-import { Link } from "@inertiajs/inertia-vue3";
+import { Head, Link } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
+    <Head title="Movies" />
     <AppLayout>
         <!-- COMPONENT HEADER -->
         <Header />
@@ -365,7 +366,7 @@ export default {
 
         filterCategory() {
             return this.movieList.filter(
-                (item) => item.categories[0].id == this.selectedCategory
+                (movie) => movie.categories[0].id == this.selectedCategory
             );
         },
     },

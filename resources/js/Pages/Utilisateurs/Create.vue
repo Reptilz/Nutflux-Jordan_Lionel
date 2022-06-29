@@ -1,7 +1,6 @@
-<script setup></script>
-
 <template>
     <AppLayout>
+        <Head title="Create profile" />
         <!-- BACK -->
         <a href="/movies">
             <h1 id="back">Back ➔</h1>

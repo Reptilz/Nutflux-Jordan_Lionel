@@ -39,7 +39,7 @@ const logout = () => {
         <JetBanner />
 
         <div class="min-h-screen bg-black">
-            <nav class="bg-white border-b border-gray-100">
+            <nav class="bg-black border-b-4 border-red-700">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
@@ -47,9 +47,11 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                    <JetApplicationMark
-                                        class="block h-9 w-auto"
-                                    />
+                                    <p
+                                        class="text-red-700 text-4xl hover:text-5xl"
+                                    >
+                                        N
+                                    </p>
                                 </Link>
                             </div>
 
@@ -58,20 +60,20 @@ const logout = () => {
                                 class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
                             >
                                 <JetNavLink
+                                    class="text-white"
                                     :href="route('dashboard')"
                                     :active="route().current('dashboard')"
                                 >
                                     Dashboard
                                 </JetNavLink>
 
-                                <jet-nav-link
+                                <JetNavLink
+                                    class="text-white"
                                     href="/movies"
-                                    :active="
-                                        $page.currentRouteName == 'movies.index'
-                                    "
+                                    :active="route().current('movies.index')"
                                 >
                                     Movies
-                                </jet-nav-link>
+                                </JetNavLink>
                             </div>
                         </div>
 
