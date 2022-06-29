@@ -28207,25 +28207,22 @@ var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "modal"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_16 = {
+  "class": "modal"
+};
+
+var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     "class": "close-button mb-2"
-  }, "×"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "modal-content"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
-    src: "https://videos.cineserie.com/player/index/172418/3/19",
-    width: "590",
-    height: "360",
-    frameborder: "0",
-    allow: "autoplay; fullscreen; picture-in-picture",
-    allowfullscreen: ""
-  })])], -1
+  }, "×", -1
   /* HOISTED */
   );
 });
 
+var _hoisted_18 = {
+  "class": "modal-content"
+};
+var _hoisted_19 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["AppLayout"], null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -28277,7 +28274,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         );
       }), 128
       /* KEYED_FRAGMENT */
-      ))])])]), _hoisted_15, _hoisted_16])];
+      ))])])]), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
+        src: "https://videos.cineserie.com/player/index/".concat($props.movies.url_video, "/3/19"),
+        width: "590",
+        height: "360",
+        frameborder: "0",
+        allow: "autoplay; fullscreen; picture-in-picture",
+        allowfullscreen: ""
+      }, null, 8
+      /* PROPS */
+      , _hoisted_19)])])])];
     }),
     _: 1
     /* STABLE */
