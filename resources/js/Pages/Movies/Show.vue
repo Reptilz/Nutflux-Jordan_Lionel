@@ -1,8 +1,9 @@
 <script setup>
-import { Link } from "@inertiajs/inertia-vue3";
+import { Head, Link } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
+    <Head :title="movies.title" />
     <AppLayout>
         <!-- BACK -->
         <Link :href="'/movies'">
