@@ -59,10 +59,16 @@ import { Link } from "@inertiajs/inertia-vue3";
                 Play Trailer
             </button>
             <div class="modal">
-                <span class="close-button  mb-2">×</span>
+                <span class="close-button mb-2">×</span>
                 <div class="modal-content">
-                    
-                   <iframe src="https://videos.cineserie.com/player/index/172418/3/19" width="590" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <iframe
+                        :src="`https://videos.cineserie.com/player/index/${movies.url_video}/3/19`"
+                        width="590"
+                        height="360"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
                 </div>
             </div>
         </div>
@@ -162,14 +168,13 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(185 28 28 );
+    background-color: rgb(185 28 28);
     padding: 5px;
     width: 600px;
     border-radius: 0.5rem;
-    
 }
 
-.modal-content:hover{
+.modal-content:hover {
     background-color: rgb(239 68 68);
 }
 
@@ -180,12 +185,11 @@ img {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: rgb(185 28 28 );
-    margin : 10px;
+    background-color: rgb(185 28 28);
+    margin: 10px;
     position: absolute;
     top: 20%;
     left: 80%;
-
 }
 
 .close-button:hover {
