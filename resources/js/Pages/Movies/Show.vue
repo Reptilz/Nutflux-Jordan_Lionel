@@ -10,7 +10,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
             <h1 id="back">Back ➔</h1>
         </Link>
 
-        <div class="details bg-black pt-10">
+        <div class="details h-screen bg-black pt-10">
             <img
                 class="float-left ml-20 pr-10 transform h-64 w-80 transition duration-500 hover:scale-110"
                 :src="
