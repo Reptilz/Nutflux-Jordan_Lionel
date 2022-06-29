@@ -13,7 +13,7 @@ import { Link } from "@inertiajs/inertia-vue3";
             <!-- Profil -->
              <Link class="align" :href="route('movies.index')">
                 <div
-                    class="m-7"
+                    class="m-7 hover"
                     v-for="utilisateur in utilisateurs"
                     :key="utilisateur.id"
                 >
@@ -75,7 +75,7 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss" scoped>
 .align{
     display: flex;
 	flex-direction: row;
@@ -83,5 +83,24 @@ export default {
 	justify-content: flex-start;
 	align-items: baseline;
 	align-content: stretch;
+}
+
+.hover{
+
+ &:hover{
+
+    img {
+        border-color: white;
+    }
+    
+    p{
+        
+      color:white;
+        
+    }
+ }    
+
+
+   
 }
 </style>
