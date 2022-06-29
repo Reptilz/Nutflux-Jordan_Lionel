@@ -22554,7 +22554,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var classes = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
-      return props.active ? "inline-flex items-center px-1 pt-1 border-b-4 border-red-400 text-sm font-medium leading-5 text-red-400 focus:outline-none focus:border-indigo-700 transition" : "inline-flex items-center px-1 pt-1 border-b-4 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-400 hover:border-gray-300 focus:outline-none focus:text-gray-400 focus:border-gray-300 transition";
+      return props.active ? "inline-flex font-bold items-center px-1 pt-1 border-b-4 border-red-400 text-sm font-medium leading-5 text-red-700 focus:outline-none focus:border-indigo-700 transition" : "inline-flex font-bold items-center px-1 pt-1 border-b-4 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-400 hover:border-gray-300 focus:outline-none focus:text-gray-400 focus:border-gray-300 transition";
     });
     var __returned__ = {
       props: props,
@@ -25799,13 +25799,13 @@ var _hoisted_6 = {
 };
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-red-700 text-4xl hover:text-5xl"
+  "class": "text-red-700 text-4xl hover:text-5xl font-bold"
 }, " N ", -1
 /* HOISTED */
 );
 
 var _hoisted_8 = {
-  "class": "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
+  "class": "hidden space-x-5 sm:-my-px sm:ml-10 sm:flex"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ");
@@ -26044,7 +26044,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8
   /* PROPS */
   , ["title"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["JetBanner"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary Navigation Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Logo "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-    href: _ctx.route('dashboard')
+    href: "#"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_7];
@@ -26052,10 +26052,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }, 8
-  /* PROPS */
-  , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navigation Links "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["JetNavLink"], {
-    "class": "text-white",
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navigation Links "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["JetNavLink"], {
+    "class": "text-white font-bold",
     href: _ctx.route('dashboard'),
     active: _ctx.route().current('dashboard')
   }, {

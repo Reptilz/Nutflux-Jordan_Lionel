@@ -46,9 +46,9 @@ const logout = () => {
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link href="#">
                                     <p
-                                        class="text-red-700 text-4xl hover:text-5xl"
+                                        class="text-red-700 text-4xl hover:text-5xl font-bold"
                                     >
                                         N
                                     </p>
@@ -57,10 +57,10 @@ const logout = () => {
 
                             <!-- Navigation Links -->
                             <div
-                                class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
+                                class="hidden space-x-5 sm:-my-px sm:ml-10 sm:flex"
                             >
                                 <JetNavLink
-                                    class="text-white"
+                                    class="text-white font-bold"
                                     :href="route('dashboard')"
                                     :active="route().current('dashboard')"
                                 >
