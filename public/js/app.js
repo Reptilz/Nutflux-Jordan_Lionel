@@ -28191,17 +28191,16 @@ var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "modal"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "modal-content"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     "class": "close-button mb-2"
-  }, "×"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
-    width: "560",
-    height: "315",
-    src: "https://www.youtube.com/embed/-FZ-pPFAjYY?controls=0",
-    title: "YouTube video player",
+  }, "×"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "modal-content"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
+    src: "https://videos.cineserie.com/player/index/172418/3/19",
+    width: "590",
+    height: "360",
     frameborder: "0",
-    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+    allow: "autoplay; fullscreen; picture-in-picture",
     allowfullscreen: ""
   })])], -1
   /* HOISTED */
@@ -29914,7 +29913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#back[data-v-37ce86d0] {\n  font-size: 2rem;\n  color: white;\n  padding: 10px;\n  border-radius: 10px;\n  text-align: center;\n  padding-top: 40px;\n  margin-bottom: 25px;\n}\n#back[data-v-37ce86d0]:hover {\n  opacity: 0.5;\n}\ndiv[data-v-37ce86d0] {\n  color: white;\n}\nimg[data-v-37ce86d0] {\n  height: 500px;\n  width: 400px;\n}\n.info[data-v-37ce86d0] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-items: baseline;\n  align-content: stretch;\n}\n.actors-directors[data-v-37ce86d0] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-items: baseline;\n  align-content: stretch;\n}\n.modal[data-v-37ce86d0] {\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  opacity: 0;\n  visibility: hidden;\n  transform: scale(1.1);\n  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;\n}\n.modal-content[data-v-37ce86d0] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background-color: white;\n  padding: 1rem 1.5rem;\n  width: 600px;\n  border-radius: 0.5rem;\n}\n.close-button[data-v-37ce86d0] {\n  float: right;\n  width: 1.5rem;\n  line-height: 1.5rem;\n  text-align: center;\n  cursor: pointer;\n  border-radius: 0.25rem;\n  background-color: lightgray;\n}\n.close-button[data-v-37ce86d0]:hover {\n  background-color: darkgray;\n}\n.show-modal[data-v-37ce86d0] {\n  opacity: 1;\n  visibility: visible;\n  transform: scale(1);\n  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#back[data-v-37ce86d0] {\n  font-size: 2rem;\n  color: white;\n  padding: 10px;\n  border-radius: 10px;\n  text-align: center;\n  padding-top: 40px;\n  margin-bottom: 25px;\n}\n#back[data-v-37ce86d0]:hover {\n  opacity: 0.5;\n}\ndiv[data-v-37ce86d0] {\n  color: white;\n}\nimg[data-v-37ce86d0] {\n  height: 500px;\n  width: 400px;\n}\n.info[data-v-37ce86d0] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-items: baseline;\n  align-content: stretch;\n}\n.actors-directors[data-v-37ce86d0] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-items: baseline;\n  align-content: stretch;\n}\n.modal[data-v-37ce86d0] {\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  opacity: 0.9;\n  visibility: hidden;\n  transform: scale(1.1);\n  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;\n}\n.modal-content[data-v-37ce86d0] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background-color: rgb(185, 28, 28);\n  padding: 5px;\n  width: 600px;\n  border-radius: 0.5rem;\n}\n.modal-content[data-v-37ce86d0]:hover {\n  background-color: rgb(239, 68, 68);\n}\n.close-button[data-v-37ce86d0] {\n  float: right;\n  width: 1.5rem;\n  line-height: 1.5rem;\n  text-align: center;\n  cursor: pointer;\n  border-radius: 0.25rem;\n  background-color: rgb(185, 28, 28);\n  margin: 10px;\n  position: absolute;\n  top: 20%;\n  left: 80%;\n}\n.close-button[data-v-37ce86d0]:hover {\n  background-color: rgb(239, 68, 68);\n}\n.show-modal[data-v-37ce86d0] {\n  opacity: 1;\n  visibility: visible;\n  transform: scale(1);\n  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

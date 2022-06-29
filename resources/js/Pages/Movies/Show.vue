@@ -59,17 +59,10 @@ import { Link } from "@inertiajs/inertia-vue3";
                 Play Trailer
             </button>
             <div class="modal">
+                <span class="close-button  mb-2">×</span>
                 <div class="modal-content">
-                    <span class="close-button mb-2">×</span>
-                    <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/-FZ-pPFAjYY?controls=0"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
+                    
+                   <iframe src="https://videos.cineserie.com/player/index/172418/3/19" width="590" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -158,7 +151,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    opacity: 0.9;
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
@@ -169,10 +162,15 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1rem 1.5rem;
+    background-color: rgb(185 28 28 );
+    padding: 5px;
     width: 600px;
     border-radius: 0.5rem;
+    
+}
+
+.modal-content:hover{
+    background-color: rgb(239 68 68);
 }
 
 .close-button {
@@ -182,11 +180,16 @@ img {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
+    background-color: rgb(185 28 28 );
+    margin : 10px;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+
 }
 
 .close-button:hover {
-    background-color: darkgray;
+    background-color: rgb(239 68 68);
 }
 
 .show-modal {

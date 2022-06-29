@@ -1002,17 +1002,14 @@ select {
 .float-left {
   float: left;
 }
-.m-10 {
-  margin: 2.5rem;
+.m-7 {
+  margin: 1.75rem;
 }
 .m-auto {
   margin: auto;
 }
 .m-3 {
   margin: 0.75rem;
-}
-.m-7 {
-  margin: 1.75rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -1191,9 +1188,6 @@ select {
 .h-64 {
   height: 16rem;
 }
-.h-1\/2 {
-  height: 50%;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1370,9 +1364,6 @@ select {
 }
 .gap-5 {
   gap: 1.25rem;
-}
-.gap-2 {
-  gap: 0.5rem;
 }
 .gap-3 {
   gap: 0.75rem;
@@ -1734,6 +1725,9 @@ select {
 }
 .pb-7 {
   padding-bottom: 1.75rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
 }
 .text-left {
   text-align: left;
