@@ -218,8 +218,10 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
                                             </div>
                                             <p
                                                 class="text-xs text-gray-100 mb-4"
+                                                
                                             >
                                                 {{ movie.overview }}
+                                                
                                             </p>
                                         </div>
 
@@ -349,6 +351,7 @@ export default {
             directorList: this.directors,
             searchKey: "",
             selectedCategory: "",
+            
         };
     },
     methods: {
