@@ -3,6 +3,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
+    <!-- NTM MORLET -->
     <Head title="Movies" />
     <AppLayout>
         <!-- COMPONENT HEADER -->
