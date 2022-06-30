@@ -6,10 +6,9 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
     <Head title="Movies" />
     <AppLayout>
         <!-- COMPONENT HEADER -->
-        <Header />
 
         <!-- CATEGORIES SECTION -->
-        <div class="list-category">
+        <div class="list-category mt-20">
             <div class="mb-10">
                 <button
                     v-for="cat in this.categorieList.slice(0, 7)"
@@ -123,9 +122,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
                                     <div class="space-y-6 detail_info">
                                         <div
                                             class="flex flex-col space-y-2 inner"
-
                                         >
-                                         
                                             <a
                                                 class="relative flex items-center w-min flex-shrink-0 p-1 text-center text-white bg-red-700 rounded-full group-hover:bg-red-500"
                                                 data-unsp-sanitized="clean"
@@ -148,7 +145,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
                                                     Trailer
                                                 </div>
                                             </a>
-                                            
+
                                             <h3
                                                 class="text-2xl font-bold text-white"
                                                 data-unsp-sanitized="clean"
@@ -319,7 +316,6 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
                         </div>
                     </div>
                 </div>
-               
             </div>
 
             <!-- NO RESULT SEARCH -->
@@ -344,7 +340,7 @@ export default {
         AppLayout,
         Header,
     },
-    
+
     data() {
         return {
             movieList: this.movies,
@@ -400,6 +396,4 @@ export default {
     align-items: baseline;
     align-content: stretch;
 }
-
-
 </style>

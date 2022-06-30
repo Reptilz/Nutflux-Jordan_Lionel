@@ -23778,7 +23778,7 @@ __webpack_require__.r(__webpack_exports__);
     var confirmingUserDeletion = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
     var passwordInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-      password: ''
+      password: ""
     });
 
     var confirmUserDeletion = function confirmUserDeletion() {
@@ -23789,7 +23789,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     var deleteUser = function deleteUser() {
-      form["delete"](route('current-user.destroy'), {
+      form["delete"](route("current-user.destroy"), {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           return closeModal();
@@ -23874,7 +23874,7 @@ __webpack_require__.r(__webpack_exports__);
     var confirmingLogout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
     var passwordInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-      password: ''
+      password: ""
     });
 
     var confirmLogout = function confirmLogout() {
@@ -23885,7 +23885,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     var logoutOtherBrowserSessions = function logoutOtherBrowserSessions() {
-      form["delete"](route('other-browser-sessions.destroy'), {
+      form["delete"](route("other-browser-sessions.destroy"), {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           return closeModal();
@@ -23980,7 +23980,7 @@ __webpack_require__.r(__webpack_exports__);
     var setupKey = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
     var recoveryCodes = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
     var confirmationForm = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.useForm)({
-      code: ''
+      code: ""
     });
     var twoFactorEnabled = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
       var _usePage$props$value$;
@@ -23996,7 +23996,7 @@ __webpack_require__.r(__webpack_exports__);
 
     var enableTwoFactorAuthentication = function enableTwoFactorAuthentication() {
       enabling.value = true;
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.post('/user/two-factor-authentication', {}, {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.post("/user/two-factor-authentication", {}, {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           return Promise.all([showQrCode(), showSetupKey(), showRecoveryCodes()]);
@@ -24009,25 +24009,25 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     var showQrCode = function showQrCode() {
-      return axios.get('/user/two-factor-qr-code').then(function (response) {
+      return axios.get("/user/two-factor-qr-code").then(function (response) {
         qrCode.value = response.data.svg;
       });
     };
 
     var showSetupKey = function showSetupKey() {
-      return axios.get('/user/two-factor-secret-key').then(function (response) {
+      return axios.get("/user/two-factor-secret-key").then(function (response) {
         setupKey.value = response.data.secretKey;
       });
     };
 
     var showRecoveryCodes = function showRecoveryCodes() {
-      return axios.get('/user/two-factor-recovery-codes').then(function (response) {
+      return axios.get("/user/two-factor-recovery-codes").then(function (response) {
         recoveryCodes.value = response.data;
       });
     };
 
     var confirmTwoFactorAuthentication = function confirmTwoFactorAuthentication() {
-      confirmationForm.post('/user/confirmed-two-factor-authentication', {
+      confirmationForm.post("/user/confirmed-two-factor-authentication", {
         errorBag: "confirmTwoFactorAuthentication",
         preserveScroll: true,
         preserveState: true,
@@ -24040,14 +24040,14 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     var regenerateRecoveryCodes = function regenerateRecoveryCodes() {
-      axios.post('/user/two-factor-recovery-codes').then(function () {
+      axios.post("/user/two-factor-recovery-codes").then(function () {
         return showRecoveryCodes();
       });
     };
 
     var disableTwoFactorAuthentication = function disableTwoFactorAuthentication() {
       disabling.value = true;
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia["delete"]('/user/two-factor-authentication', {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia["delete"]("/user/two-factor-authentication", {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           disabling.value = false;
@@ -24133,26 +24133,26 @@ __webpack_require__.r(__webpack_exports__);
     var passwordInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
     var currentPasswordInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-      current_password: '',
-      password: '',
-      password_confirmation: ''
+      current_password: "",
+      password: "",
+      password_confirmation: ""
     });
 
     var updatePassword = function updatePassword() {
-      form.put(route('user-password.update'), {
-        errorBag: 'updatePassword',
+      form.put(route("user-password.update"), {
+        errorBag: "updatePassword",
         preserveScroll: true,
         onSuccess: function onSuccess() {
           return form.reset();
         },
         onError: function onError() {
           if (form.errors.password) {
-            form.reset('password', 'password_confirmation');
+            form.reset("password", "password_confirmation");
             passwordInput.value.focus();
           }
 
           if (form.errors.current_password) {
-            form.reset('current_password');
+            form.reset("current_password");
             currentPasswordInput.value.focus();
           }
         }
@@ -24224,7 +24224,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.useForm)({
-      _method: 'PUT',
+      _method: "PUT",
       name: props.user.name,
       email: props.user.email,
       photo: null
@@ -24238,8 +24238,8 @@ __webpack_require__.r(__webpack_exports__);
         form.photo = photoInput.value.files[0];
       }
 
-      form.post(route('user-profile-information.update'), {
-        errorBag: 'updateProfileInformation',
+      form.post(route("user-profile-information.update"), {
+        errorBag: "updateProfileInformation",
         preserveScroll: true,
         onSuccess: function onSuccess() {
           return clearPhotoFileInput();
@@ -24268,7 +24268,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     var deletePhoto = function deletePhoto() {
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia["delete"](route('current-user-photo.destroy'), {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia["delete"](route("current-user-photo.destroy"), {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           photoPreview.value = null;
@@ -27670,7 +27670,7 @@ var _withScopeId = function _withScopeId(n) {
 };
 
 var _hoisted_1 = {
-  "class": "list-category"
+  "class": "list-category mt-20"
 };
 var _hoisted_2 = {
   "class": "mb-10"
@@ -28003,7 +28003,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Movies"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppLayout"], null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" COMPONENT HEADER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CATEGORIES SECTION "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_this.categorieList.slice(0, 7), function (cat) {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" COMPONENT HEADER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CATEGORIES SECTION "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_this.categorieList.slice(0, 7), function (cat) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
           key: cat.id,
           type: "button",
@@ -28354,9 +28354,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Delete Account ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-50"
+}, "Delete Account", -1
+/* HOISTED */
+);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Permanently delete your account. ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-300"
+}, " Permanently delete your account.", -1
+/* HOISTED */
+);
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "max-w-xl text-sm text-gray-600"
@@ -28483,9 +28491,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Browser Sessions ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-50"
+}, " Browser Sessions", -1
+/* HOISTED */
+);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Manage and log out your active sessions on other browsers and devices. ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-300"
+}, " Manage and log out your active sessions on other browsers and devices.", -1
+/* HOISTED */
+);
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "max-w-xl text-sm text-gray-600"
@@ -28600,7 +28616,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
           key: i,
           "class": "flex items-center"
-        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [session.agent.is_desktop ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_5, _hoisted_7)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_8, _hoisted_12))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.agent.platform ? session.agent.platform : 'Unknown') + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.agent.browser ? session.agent.browser : 'Unknown'), 1
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [session.agent.is_desktop ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_5, _hoisted_7)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_8, _hoisted_12))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.agent.platform ? session.agent.platform : "Unknown") + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.agent.browser ? session.agent.browser : "Unknown"), 1
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.ip_address) + ", ", 1
         /* TEXT */
@@ -28713,9 +28729,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Two Factor Authentication ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-50"
+}, "Two Factor Authentication", -1
+/* HOISTED */
+);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Add additional security to your account using two factor authentication. ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-300"
+}, "Add additional security to your account using two factor authentication.", -1
+/* HOISTED */
+);
 
 var _hoisted_3 = {
   key: 0,
@@ -29014,9 +29038,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Update Password ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-50"
+}, "Update Password", -1
+/* HOISTED */
+);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Ensure your account is using a long, random password to stay secure. ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-300"
+}, "Ensure your account is using a long, random password to stay secure.", -1
+/* HOISTED */
+);
 
 var _hoisted_3 = {
   "class": "col-span-6 sm:col-span-4"
@@ -29155,9 +29187,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Profile Information ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-50"
+}, "Profile Information", -1
+/* HOISTED */
+);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Update your account's profile information and email address. ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-slate-300"
+}, "Update your account's profile information and email address.", -1
+/* HOISTED */
+);
 
 var _hoisted_3 = {
   key: 0,
@@ -29385,7 +29425,8 @@ var _hoisted_2 = {
   "class": "max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"
 };
 var _hoisted_3 = {
-  key: 0
+  key: 0,
+  "class": ""
 };
 var _hoisted_4 = {
   key: 1
