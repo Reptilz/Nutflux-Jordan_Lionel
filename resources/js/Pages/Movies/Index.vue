@@ -218,6 +218,20 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
                                             </div>
                                             <p
                                                 class="text-xs text-gray-100 mb-4"
+                                                v-if="
+                                                    movie.overview.length > 200
+                                                "
+                                            >
+                                                {{
+                                                    movie.overview.substring(
+                                                        0,
+                                                        200
+                                                    ) + "..."
+                                                }}
+                                            </p>
+                                            <p
+                                                class="text-xs text-gray-100 mb-4"
+                                                v-else
                                             >
                                                 {{ movie.overview }}
                                             </p>
