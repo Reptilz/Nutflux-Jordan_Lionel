@@ -1146,6 +1146,9 @@ select {
 .inline-flex {
   display: inline-flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
 }
@@ -1417,12 +1420,9 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-<<<<<<< HEAD
 .break-all {
   word-break: break-all;
 }
-=======
->>>>>>> 5622c2e4b8ada1a4c1a8b1e24d1674ab195dd77f
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -1512,6 +1512,10 @@ select {
 .border-red-700 {
   --tw-border-opacity: 1;
   border-color: rgb(185 28 28 / var(--tw-border-opacity));
+}
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1904,7 +1908,6 @@ select {
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
-<<<<<<< HEAD
 }
 .text-slate-300 {
   --tw-text-opacity: 1;
@@ -1913,8 +1916,6 @@ select {
 .text-slate-50 {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
-=======
->>>>>>> 5622c2e4b8ada1a4c1a8b1e24d1674ab195dd77f
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -2039,6 +2040,14 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+.hover\:border-gray-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+.hover\:border-gray-200:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
 .hover\:bg-indigo-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
@@ -2099,13 +2108,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(252 165 165 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-=======
-.hover\:text-red-600:hover {
+.hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
->>>>>>> 5622c2e4b8ada1a4c1a8b1e24d1674ab195dd77f
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -2292,6 +2298,11 @@ select {
 }
 @media (prefers-color-scheme: dark) {
 
+  .dark\:border-gray-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  }
+
   .dark\:border-gray-600 {
     --tw-border-opacity: 1;
     border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -2302,21 +2313,19 @@ select {
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-500 {
     --tw-bg-opacity: 1;
     background-color: rgb(107 114 128 / var(--tw-bg-opacity));
   }
 
-  .dark\:text-gray-300 {
+  .dark\:text-gray-500 {
     --tw-text-opacity: 1;
-    color: rgb(209 213 219 / var(--tw-text-opacity));
-  }
-
-<<<<<<< HEAD
-=======
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
+    color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -2324,7 +2333,16 @@ select {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
->>>>>>> 5622c2e4b8ada1a4c1a8b1e24d1674ab195dd77f
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+  }
+
   .dark\:placeholder-gray-300::-moz-placeholder {
     --tw-placeholder-opacity: 1;
     color: rgb(209 213 219 / var(--tw-placeholder-opacity));
@@ -2400,6 +2418,10 @@ select {
     margin-left: 1.5rem;
   }
 
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2414,6 +2436,10 @@ select {
 
   .sm\:h-10 {
     height: 2.5rem;
+  }
+
+  .sm\:h-20 {
+    height: 5rem;
   }
 
   .sm\:w-10 {
@@ -2538,6 +2564,10 @@ select {
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-right {
+    text-align: right;
   }
 }
 @media (min-width: 768px) {
