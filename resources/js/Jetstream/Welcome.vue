@@ -52,6 +52,14 @@ import { Link } from "@inertiajs/inertia-vue3";
                 </Link>
             </Link>
         </div>
+        <!-- Manage Profiles -->
+        <Link :href="route('profile.show')">
+            <button
+                class="border-2 border-gray-400 text-gray-400 px-4 py-1 mt-10 hover:border-gray-200 hover:text-gray-200"
+            >
+                Manage Profiles
+            </button>
+        </Link>
     </div>
 </template>
 
