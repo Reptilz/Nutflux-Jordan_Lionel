@@ -23595,7 +23595,7 @@ var __default__ = {
       actorList: this.actors,
       directorList: this.directors,
       searchKey: "",
-      selectedCategory: ""
+      selectedCategory: null
     };
   },
   methods: {
@@ -23609,6 +23609,12 @@ var __default__ = {
 
       return this.movieList.filter(function (movie) {
         return movie.title.toLowerCase().includes(_this.searchKey.toLowerCase());
+      }).filter(function (movie) {
+        if (_this.selectedCategory == null) {
+          return true;
+        }
+
+        return movie.categories[0].id == _this.selectedCategory;
       });
     },
     filterCategory: function filterCategory() {

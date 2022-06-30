@@ -362,7 +362,7 @@ export default {
             actorList: this.actors,
             directorList: this.directors,
             searchKey: "",
-            selectedCategory: "",
+            selectedCategory: null,
         };
     },
     methods: {
@@ -372,11 +372,18 @@ export default {
     },
     computed: {
         filterList() {
-            return this.movieList.filter((movie) => {
-                return movie.title
-                    .toLowerCase()
-                    .includes(this.searchKey.toLowerCase());
-            });
+            return this.movieList
+                .filter((movie) => {
+                    return movie.title
+                        .toLowerCase()
+                        .includes(this.searchKey.toLowerCase());
+                })
+                .filter((movie) => {
+                    if (this.selectedCategory == null) {
+                        return true;
+                    }
+                    return movie.categories[0].id == this.selectedCategory;
+                });
         },
 
         filterCategory() {
