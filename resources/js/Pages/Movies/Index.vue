@@ -11,13 +11,6 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
         <div class="list-category mt-20">
             <div class="mb-10">
                 <button
-                    class="text-white bg-gradient-to-br bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-red-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                    type="button"
-                   
-                >
-                    All
-                </button>
-                <button
                     v-for="cat in this.categorieList.slice(0, 7)"
                     :key="cat.id"
                     type="button"
