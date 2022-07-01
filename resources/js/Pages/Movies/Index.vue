@@ -3,6 +3,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
+    <!-- NTM MORLET -->
     <Head title="Movies" />
     <AppLayout>
         <!-- COMPONENT HEADER -->
@@ -377,7 +378,7 @@ export default {
             this.selectedCategory = id;
         },
         refreshCat() {
-            return (this.selectedCategory = null);
+            return (this.selectedCategory = null), (this.searchKey = "");
         },
     },
     computed: {
@@ -394,12 +395,6 @@ export default {
                     }
                     return movie.categories[0].id == this.selectedCategory;
                 });
-        },
-
-        filterCategory() {
-            return this.movieList.filter(
-                (movie) => movie.categories[0].id == this.selectedCategory
-            );
         },
     },
 
